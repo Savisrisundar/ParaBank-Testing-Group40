@@ -8,8 +8,8 @@ Group 40's Software Testing Assignment 2. We tested the ParaBank demo banking si
 | Part | Files | Done by |
 |---|---|---|
 | Performance testing (JMeter) | `jmeterplan-40.JMX`, `JMeter-Analysis-40.pdf` | Savitha Sundaresan (s4193740) |
-| Selenium + SpiraPlan | `SeleniumTest-40` project | _to be added_ |
-| BDD (Cucumber) | `CucumberTest-40` project | _to be added_ |
+| Selenium + SpiraPlan | `SeleniumTest-40` project | |
+| BDD (Cucumber) | `CucumberTest-40` project |  |
 
 ## JMeter performance testing - s4193740
 
