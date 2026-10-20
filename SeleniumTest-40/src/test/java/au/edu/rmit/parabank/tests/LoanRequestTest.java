@@ -62,4 +62,35 @@ public class LoanRequestTest extends ParaBankTestSupport {
         assertFalse(text.contains("Status: Approved"),
                 "Down payment exceeding loan amount must not be approved: " + text);
     }
+
+    private void assertInvalidLoan(String amount, String downPayment, String rule) {
+        registerNewCustomer();
+        String source = firstAccountId();
+        submitLoan(amount, downPayment, source);
+        String response = wait.until(d -> {
+            String p = d.findElement(By.id("rightPanel")).getText();
+            return p.contains("Loan Request Processed") || p.toLowerCase().contains("error") ? p : null;
+        });
+        assertFalse(response.contains("Status: Approved"), rule + " must not be approved: " + response);
+        assertTrue(response.toLowerCase().contains("denied") || response.toLowerCase().contains("error")
+                        || !response.contains("Loan Request Processed"),
+                "Expected rejection or input-validation feedback for " + rule + ": " + response);
+    }
+
+    @Test void TC_LOAN_004_zeroAmountRejected() {
+        assertInvalidLoan("0", "0", "Zero loan principal");
+    }
+
+    @Test void TC_LOAN_005_negativeDownPaymentRejected() {
+        assertInvalidLoan("100", "-10", "Negative down payment");
+    }
+
+
+    @Test void TC_LOAN_006_textLoanAmountRejected() {
+        assertInvalidLoan("abc", "10", "Non-numeric loan amount");
+    }
+    @Test void TC_LOAN_007_textDownPaymentRejected() {
+        assertInvalidLoan("100", "abc", "Non-numeric down payment");
+    }
+
 }

@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: au.edu.rmit.parabank.tests.LoanRequestTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 33.79 s <<< FAILURE! -- in au.edu.rmit.parabank.tests.LoanRequestTest
+au.edu.rmit.parabank.tests.LoanRequestTest.TC_LOAN_005_negativeDownPaymentRejected -- Time elapsed: 4.607 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Negative down payment must not be approved: Loan Request Processed
+Loan Provider: Wealth Securities Dynamic Loans (WSDL)
+Date: 10-19-2026
+Status: Approved
+
+Congratulations, your loan has been approved.
+Your new account number: 30993 ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+	at au.edu.rmit.parabank.tests.LoanRequestTest.assertInvalidLoan(LoanRequestTest.java:74)
+	at au.edu.rmit.parabank.tests.LoanRequestTest.TC_LOAN_005_negativeDownPaymentRejected(LoanRequestTest.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+au.edu.rmit.parabank.tests.LoanRequestTest.TC_LOAN_003_downPaymentGreaterThanLoanRejected -- Time elapsed: 4.652 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Down payment exceeding loan amount must not be approved: Loan Request Processed
+Loan Provider: Wealth Securities Dynamic Loans (WSDL)
+Date: 10-19-2026
+Status: Approved
+
+Congratulations, your loan has been approved.
+Your new account number: 31215 ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+	at au.edu.rmit.parabank.tests.LoanRequestTest.TC_LOAN_003_downPaymentGreaterThanLoanRejected(LoanRequestTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

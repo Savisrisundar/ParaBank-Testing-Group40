@@ -1,0 +1,75 @@
+-------------------------------------------------------------------------------
+Test set: au.edu.rmit.parabank.tests.BillPayTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 35.17 s <<< FAILURE! -- in au.edu.rmit.parabank.tests.BillPayTest
+au.edu.rmit.parabank.tests.BillPayTest.TC_BILL_004_negativeAmount -- Time elapsed: 5.215 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Negative bill payment must be rejected (documented expected rule). Actual: Bill Payment Complete
+Bill Payment to Demo Utilities in the amount of $-10.00 from account 28662 was successful.
+See Account Activity for more details. ==> expected: <false> but was: <true>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+	at au.edu.rmit.parabank.tests.BillPayTest.TC_BILL_004_negativeAmount(BillPayTest.java:87)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+au.edu.rmit.parabank.tests.BillPayTest.TC_BILL_005_zeroAmountRejected -- Time elapsed: 4.414 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+Zero-amount bill payment (2 failures)
+	org.opentest4j.AssertionFailedError: DEFECT: invalid payment accepted: Bill Payment Complete
+Bill Payment to Demo Utilities in the amount of $0.00 from account 29439 was successful.
+See Account Activity for more details. ==> expected: <false> but was: <true>
+	org.opentest4j.AssertionFailedError: Payment should display validation feedback: Bill Payment Complete
+Bill Payment to Demo Utilities in the amount of $0.00 from account 29439 was successful.
+See Account Activity for more details. ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at au.edu.rmit.parabank.tests.BillPayTest.assertInvalidBillAmount(BillPayTest.java:98)
+	at au.edu.rmit.parabank.tests.BillPayTest.TC_BILL_005_zeroAmountRejected(BillPayTest.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	Suppressed: org.opentest4j.AssertionFailedError: DEFECT: invalid payment accepted: Bill Payment Complete
+Bill Payment to Demo Utilities in the amount of $0.00 from account 29439 was successful.
+See Account Activity for more details. ==> expected: <false> but was: <true>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+		at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+		at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+		at au.edu.rmit.parabank.tests.BillPayTest.lambda$assertInvalidBillAmount$0(BillPayTest.java:99)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+	Suppressed: org.opentest4j.AssertionFailedError: Payment should display validation feedback: Bill Payment Complete
+Bill Payment to Demo Utilities in the amount of $0.00 from account 29439 was successful.
+See Account Activity for more details. ==> expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+		at au.edu.rmit.parabank.tests.BillPayTest.lambda$assertInvalidBillAmount$1(BillPayTest.java:100)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+

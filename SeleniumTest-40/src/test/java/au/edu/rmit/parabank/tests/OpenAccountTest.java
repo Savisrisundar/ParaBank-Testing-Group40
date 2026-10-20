@@ -27,20 +27,46 @@ public class OpenAccountTest extends ParaBankTestSupport {
         registerNewCustomer();
         String id = openAccount("SAVINGS");
         assertFalse(id.isBlank());
+        clickMenu("Accounts Overview");
+        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("accountTable"), id)),
+                "New account " + id + " must be listed after creation");
     }
 
     @Test void TC_ACC_002_openChecking() {
         registerNewCustomer();
         String id = openAccount("CHECKING");
         assertFalse(id.isBlank());
+        clickMenu("Accounts Overview");
+        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("accountTable"), id)),
+                "New account " + id + " must be listed after creation");
     }
 
-    @Test void TC_ACC_003_newAccountListed() {
+    @Test void TC_ACC_003_newAccountsHaveUniqueNumbers() {
         registerNewCustomer();
-        String id = openAccount("SAVINGS");
+        String first = openAccount("SAVINGS");
+        String second = openAccount("CHECKING");
+        assertNotEquals(first, second, "Two accounts must have different account numbers");
         clickMenu("Accounts Overview");
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("accountTable"), id));
-        assertTrue(driver.findElement(By.id("accountTable")).getText().contains(id),
-                "Created account should appear in overview");
+        // The heading may appear before account-table data finishes rendering.
+        // Wait for both exact account IDs within the live table, not a heading snapshot.
+        String overview;
+        try {
+            overview = wait.until(d -> {
+            java.util.List<org.openqa.selenium.WebElement> tables = d.findElements(By.id("accountTable"));
+            if (tables.isEmpty()) return null;
+            try {
+                String text = tables.get(0).getText();
+                return text.contains(first) && text.contains(second) ? text : null;
+            } catch (org.openqa.selenium.StaleElementReferenceException ex) { return null; }
+        });
+        } catch (org.openqa.selenium.TimeoutException ex) {
+            TestOutcome.evidence(driver, "TC_ACC_003_account_persistence");
+            fail("Created account numbers " + first + ", " + second
+                + " not both visible in accountTable; actual panel=" + TestOutcome.panel(driver));
+            return;
+        }
+        assertAll("Both accounts persist",
+            () -> assertTrue(overview.contains(first), "First created account is missing: " + first),
+            () -> assertTrue(overview.contains(second), "Second created account is missing: " + second));
     }
 }

@@ -49,4 +49,32 @@ public class LoginTest extends ParaBankTestSupport {
                 By.cssSelector("#loginPanel"))).isDisplayed());
         assertTrue(driver.findElements(By.linkText("Log Out")).isEmpty());
     }
+
+    @Test void TC_LOG_006_passwordCaseSensitive() {
+        String username = registerNewCustomer();
+        clickMenu("Log Out");
+        String changed = PASSWORD.equals(PASSWORD.toUpperCase()) ? PASSWORD.toLowerCase() : PASSWORD.toUpperCase();
+        assertNotEquals(PASSWORD, changed, "Fixture password must contain letters");
+        attempt(username, changed);
+        String result = panelTextContaining("Error!");
+        assertTrue(result.contains("username and password could not be verified"), result);
+        assertTrue(driver.findElements(By.linkText("Log Out")).isEmpty(), "Invalid login must not create a session");
+    }
+
+
+    @Test void TC_LOG_007_emptyUsernameOnly() {
+        attempt("", PASSWORD);
+        String result = panelTextContaining("Error!");
+        assertTrue(result.toLowerCase().contains("username") || result.toLowerCase().contains("required"),
+            "Missing username should trigger meaningful authentication feedback: " + result);
+        assertTrue(driver.findElements(By.linkText("Log Out")).isEmpty(), "Blank username must not authenticate");
+    }
+    @Test void TC_LOG_008_emptyPasswordOnly() {
+        attempt("nonexistent_" + System.nanoTime(), "");
+        String result = panelTextContaining("Error!");
+        assertTrue(result.toLowerCase().contains("password") || result.toLowerCase().contains("required"),
+            "Missing password should trigger meaningful authentication feedback: " + result);
+        assertTrue(driver.findElements(By.linkText("Log Out")).isEmpty(), "Blank password must not authenticate");
+    }
+
 }

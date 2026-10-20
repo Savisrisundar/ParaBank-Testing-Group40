@@ -72,4 +72,51 @@ public class FindTransactionsTest extends ParaBankTestSupport {
                         driver.findElements(By.cssSelector("#transactionTable tbody tr")).isEmpty(),
                 "No transactions should exist for 1990: " + panel);
     }
+
+    @Test void TC_TXN_005_nonexistentTransactionId() {
+        String accountId = makePaymentAndGetAccount();
+        openFind(accountId);
+        typeId("transactionId", "999999999999999");
+        driver.findElement(By.id("findById")).click();
+        String text = wait.until(d -> {
+            String p = d.findElement(By.id("rightPanel")).getText();
+            return p.contains("Transaction Results") || p.contains("No transactions found")
+                    || p.toLowerCase().contains("error") ? p : null;
+        });
+        assertTrue(text.contains("No transactions found")
+                        || driver.findElements(By.cssSelector("#transactionTable tbody tr")).isEmpty(),
+                "Nonexistent ID must not produce a transaction: " + text);
+    }
+
+    @Test void TC_TXN_006_invalidDateFormat() {
+        String accountId = makePaymentAndGetAccount();
+        openFind(accountId);
+        typeId("transactionDate", "not-a-date");
+        driver.findElement(By.id("findByDate")).click();
+        String result = wait.until(d -> {
+            String p = d.findElement(By.id("rightPanel")).getText();
+            return p.contains("Transaction Results") || p.toLowerCase().contains("error")
+                    || p.toLowerCase().contains("invalid") ? p : null;
+        });
+        assertFalse(result.contains("Transaction Results") && !result.toLowerCase().contains("error")
+                        && !result.toLowerCase().contains("invalid"),
+                "Invalid date must not be treated as a normal search: " + result);
+    }
+
+
+    @Test void TC_TXN_007_invalidAmountFormat() {
+        String accountId = makePaymentAndGetAccount();
+        openFind(accountId);
+        typeId("amount", "not-a-number");
+        driver.findElement(By.id("findByAmount")).click();
+        String response = wait.until(d -> {
+            String text = d.findElement(By.id("rightPanel")).getText();
+            return text.contains("Transaction Results") || text.toLowerCase().contains("error")
+                || text.toLowerCase().contains("invalid") ? text : null;
+        });
+        assertFalse(response.contains("Transaction Results")
+            && !response.toLowerCase().contains("error") && !response.toLowerCase().contains("invalid"),
+            "Non-numeric amount must not be accepted as a valid search: " + response);
+    }
+
 }

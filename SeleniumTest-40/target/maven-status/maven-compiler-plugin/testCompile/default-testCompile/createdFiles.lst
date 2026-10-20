@@ -1,0 +1,10 @@
+au\edu\rmit\parabank\tests\FindTransactionsTest.class
+au\edu\rmit\parabank\tests\TestOutcome.class
+au\edu\rmit\parabank\tests\BrowserLaunchTest.class
+au\edu\rmit\parabank\tests\LoginTest.class
+au\edu\rmit\parabank\base\ParaBankTestSupport.class
+au\edu\rmit\parabank\tests\RegistrationTest.class
+au\edu\rmit\parabank\tests\LoanRequestTest.class
+au\edu\rmit\parabank\tests\BillPayTest.class
+au\edu\rmit\parabank\tests\OpenAccountTest.class
+au\edu\rmit\parabank\base\BaseTest.class

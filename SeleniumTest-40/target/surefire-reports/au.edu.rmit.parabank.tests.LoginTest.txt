@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: au.edu.rmit.parabank.tests.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.08 s -- in au.edu.rmit.parabank.tests.LoginTest

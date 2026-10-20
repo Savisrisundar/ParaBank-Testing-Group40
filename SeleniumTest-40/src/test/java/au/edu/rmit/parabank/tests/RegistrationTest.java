@@ -11,6 +11,8 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.junit.jupiter.api.Assumptions.assumeFalse;
+
 /** Registration: positive and negative boundary/format cases with documented assumptions.
  * REG_005 numeric-only postal rule and REG_006 alphabetic name rule are test assumptions.
  * Their assertion failures are preserved as potential defects, not suppressed.
@@ -99,20 +101,9 @@ public class RegistrationTest extends BaseTest {
     // ParaBank may replace rightPanel after submission. A stale reference here is
     // a transient DOM refresh, so retry instead of marking the test as broken.
     private String waitForRegistrationOutcome(String errorElementId) {
-        return wait.until(webDriver -> {
-            try {
-                String pageText = webDriver.findElement(By.id("rightPanel")).getText();
-                boolean success = pageText.contains("Your account was created successfully");
-                boolean validationError = webDriver.findElements(By.id(errorElementId))
-                        .stream()
-                        .anyMatch(element -> element.isDisplayed()
-                                && !element.getText().isBlank());
-                return (success || validationError) ? pageText : null;
-            } catch (StaleElementReferenceException ex) {
-                // A page update happened mid-read. WebDriverWait polls again.
-                return null;
-            }
-        });
+        return TestOutcome.afterSubmit(driver, wait,
+                "Your account was created successfully", errorElementId,
+                "Registration_" + errorElementId);
     }
 
     // =====================================================
@@ -377,4 +368,123 @@ public class RegistrationTest extends BaseTest {
                 "Invalid first name should display a validation error"
         );
     }
+
+    @Test void TC_REG_007_missingLastName() {
+        openRegistrationPage();
+        fillRegistrationForm(generateUsername(), "Test@12345", "Test@12345", "3000", "Group");
+        driver.findElement(By.id("customer.lastName")).clear();
+        submitRegistration();
+        String outcome = waitForRegistrationOutcome("customer.lastName.errors");
+        String error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("customer.lastName.errors"))).getText();
+        assertAll("Last name required",
+                () -> assertFalse(outcome.contains("Your account was created successfully"), outcome),
+                () -> assertTrue(error.toLowerCase().contains("required"), "Missing last name needs validation: " + error));
+    }
+
+    @Test void TC_REG_008_missingUsername() {
+        openRegistrationPage();
+        fillRegistrationForm(generateUsername(), "Test@12345", "Test@12345", "3000", "Group");
+        driver.findElement(By.id("customer.username")).clear();
+        submitRegistration();
+        String outcome = waitForRegistrationOutcome("customer.username.errors");
+        String error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("customer.username.errors"))).getText();
+        assertAll("Username required",
+                () -> assertFalse(outcome.contains("Your account was created successfully"), outcome),
+                () -> assertTrue(error.toLowerCase().contains("required"), "Missing username needs validation: " + error));
+    }
+
+    @Test void TC_REG_009_missingPassword() {
+        openRegistrationPage();
+        fillRegistrationForm(generateUsername(), "Test@12345", "Test@12345", "3000", "Group");
+        driver.findElement(By.id("customer.password")).clear();
+        driver.findElement(By.id("repeatedPassword")).clear();
+        submitRegistration();
+        String outcome = waitForRegistrationOutcome("customer.password.errors");
+        String error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("customer.password.errors"))).getText();
+        assertAll("Password required",
+                () -> assertFalse(outcome.contains("Your account was created successfully"), outcome),
+                () -> assertTrue(error.toLowerCase().contains("required"), "Missing password needs validation: " + error));
+    }
+
+
+    /** Equivalence partition: each address field individually missing, other fields valid. */
+    private void assertMissingRegistrationField(String id, String errorId, String description) {
+        openRegistrationPage();
+        String username = generateUsername();
+        fillRegistrationForm(username, "Test@12345", "Test@12345", "3000", "Group");
+        org.openqa.selenium.WebElement field = driver.findElement(By.id(id));
+        field.clear();
+        submitRegistration();
+        String response = waitForRegistrationOutcome(errorId);
+        assertAll(description,
+            () -> assertFalse(response.contains("Your account was created successfully"),
+                description + " must not allow account creation: " + response),
+            () -> assertTrue(driver.findElements(By.id(errorId)).stream().anyMatch(
+                e -> e.isDisplayed() && !e.getText().isBlank()),
+                description + " must display a field-specific error"));
+    }
+    @Test void TC_REG_010_missingStreet() {
+        assertMissingRegistrationField("customer.address.street", "customer.address.street.errors", "Missing street");
+    }
+    @Test void TC_REG_011_missingCity() {
+        assertMissingRegistrationField("customer.address.city", "customer.address.city.errors", "Missing city");
+    }
+    @Test void TC_REG_012_missingState() {
+        assertMissingRegistrationField("customer.address.state", "customer.address.state.errors", "Missing state");
+    }
+
+    @Test
+    void TC_REG_013_missingPostalCode() {
+        String username = generateUsername();
+        openRegistrationPage();
+        fillRegistrationForm(username, "Test@12345", "Test@12345", "", "Group");
+
+        if (TestOutcome.isSecurityChallenge(driver)) {
+            TestOutcome.evidence(driver, "Registration_missingPostalCode_beforeSubmit");
+            fail("TEST BLOCKED: Cloudflare security verification appeared before submission.");
+        }
+
+        submitRegistration();
+
+        if (TestOutcome.isSecurityChallenge(driver)) {
+            TestOutcome.evidence(driver, "Registration_missingPostalCode_afterSubmit");
+            TestOutcome.evidence(driver, "TC_REG_013_Cloudflare");
+
+            assumeFalse(
+                    TestOutcome.isSecurityChallenge(driver),
+                    "TEST BLOCKED: Cloudflare security verification "
+                            + "interrupted the registration test."
+            );
+        }
+
+        // A native HTML constraint may block form submission without a ParaBank error span.
+        String browserMessage = TestOutcome.nativeValidationMessage(
+                driver, "customer.address.zipCode");
+        if (!browserMessage.isBlank()) {
+            assertFalse(driver.getPageSource().contains("Your account was created successfully"),
+                    "Registration must not succeed without a postal code");
+            return; // Browser rejected the missing field; test expectation satisfied.
+        }
+
+        String result = TestOutcome.afterSubmit(driver, wait,
+                "Your account was created successfully",
+                "customer.address.zipCode.errors",
+                "Registration_missingPostalCode");
+
+        boolean registrationSucceeded =
+                result.contains("Your account was created successfully");
+        boolean validationDisplayed = TestOutcome.fieldError(
+                driver, "customer.address.zipCode.errors");
+
+        assertAll("Missing postal code validation",
+                () -> assertFalse(registrationSucceeded,
+                        "DEFECT: registration accepted a missing postal code: " + result),
+                () -> assertTrue(validationDisplayed,
+                        "Expected a field-specific postal-code validation error: " + result));
+    }
+
+    @Test void TC_REG_014_missingSsn() {
+        assertMissingRegistrationField("customer.ssn", "customer.ssn.errors", "Missing SSN");
+    }
+
 }
