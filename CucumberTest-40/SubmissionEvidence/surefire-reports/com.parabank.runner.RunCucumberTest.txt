@@ -1,0 +1,182 @@
+-------------------------------------------------------------------------------
+Test set: com.parabank.runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 47, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 484.3 s <<< FAILURE! -- in com.parabank.runner.RunCucumberTest
+Examples.Example #1.1 -- Time elapsed: 8.315 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Bill Payment Complete
+Bill Payment to Electricity Company in the amount of $0.00 from account 125898 was successful.
+See Account Activity for more details.
+Balance changes: None detected ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:36)
+
+Examples.Example #1.2 -- Time elapsed: 8.218 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Bill Payment Complete
+Bill Payment to Electricity Company in the amount of $-1.00 from account 126120 was successful.
+See Account Activity for more details.
+Balance changes: 
+Account 126120: before=415.50, after=416.50 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:36)
+
+Examples.Example #1.4 -- Time elapsed: 68.17 s <<< FAILURE!
+java.lang.AssertionError: TEST SETUP: Accounts Overview unavailable. URL: https://parabank.parasoft.com/parabank/overview.htm, page title: ParaBank | Error
+	at com.parabank.steps.BankingSteps.openAccountsOverview(BankingSteps.java:977)
+	at com.parabank.steps.BankingSteps.inspectAccountBalances(BankingSteps.java:865)
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:878)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:36)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.id: accountTable, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#accountTable"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.51.0', revision: '35c5fab 35c5fab4a58fa5878edb255eb7747b04ca51a015'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\rayya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56401}, goog:processID: 22056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56401/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 466ae18af50229a0b9db4d6209547d0e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.parabank.steps.BankingSteps.openAccountsOverview(BankingSteps.java:960)
+	... 4 more
+
+Examples.Example #1.3 -- Time elapsed: 8.140 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Bill Payment Complete
+Bill Payment to Electricity Company in the amount of $1.00 from account 129006 was successful.
+See Account Activity for more details.
+Balance changes: 
+Account 129006: before=415.50, after=414.50 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:62)
+
+Request a loan.Reject a missing loan amount with zero down payment -- Time elapsed: 6.772 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:18)
+
+Examples.Example #1.1 -- Time elapsed: 6.740 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.2 -- Time elapsed: 7.065 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.3 -- Time elapsed: 6.740 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.5 -- Time elapsed: 6.663 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.6 -- Time elapsed: 7.034 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.7 -- Time elapsed: 6.694 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid loan was unexpectedly approved: Loan Request Processed
+Loan Provider: Wealth Securities Dynamic Loans (WSDL)
+Date: 10-21-2026
+Status: Approved
+
+Congratulations, your loan has been approved.
+Your new account number: 132336 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:785)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+
+Examples.Example #1.1 -- Time elapsed: 7.941 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Transfer Complete!
+$0.00 has been transferred from account #134223 to account #134334.
+See Account Activity for more details.
+Balance changes: None detected ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:50)
+
+Examples.Example #1.2 -- Time elapsed: 8.052 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Transfer Complete!
+-$1.00 has been transferred from account #134445 to account #134556.
+See Account Activity for more details.
+Balance changes: 
+Account 134556: before=100.00, after=99.00
+Account 134445: before=415.50, after=416.50 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:50)
+
+Examples.Example #1.3 -- Time elapsed: 8.374 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Transfer caused a server error: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:513)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:50)
+
+Examples.Example #1.4 -- Time elapsed: 8.488 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Transfer caused a server error: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:513)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:50)
+
+Examples.Example #1.5 -- Time elapsed: 68.50 s <<< FAILURE!
+java.lang.AssertionError: TEST SETUP: Accounts Overview unavailable. URL: https://parabank.parasoft.com/parabank/overview.htm, page title: ParaBank | Error
+	at com.parabank.steps.BankingSteps.openAccountsOverview(BankingSteps.java:977)
+	at com.parabank.steps.BankingSteps.inspectAccountBalances(BankingSteps.java:865)
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:878)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:50)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.id: accountTable, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#accountTable"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.51.0', revision: '35c5fab 35c5fab4a58fa5878edb255eb7747b04ca51a015'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.85, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\rayya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56090}, goog:processID: 14876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56090/devtoo..., se:cdpVersion: 155.0.8059.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a27e0b74cc268cda69d61df546a5c9d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.parabank.steps.BankingSteps.openAccountsOverview(BankingSteps.java:960)
+	... 4 more
+
+Transfer funds between a customer's bank accounts.Reject a transfer exceeding the available balance -- Time elapsed: 8.160 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Transfer Complete!
+$415.51 has been transferred from account #135444 to account #135555.
+See Account Activity for more details.
+Balance changes: 
+Account 135444: before=415.50, after=-0.01
+Account 135555: before=100.00, after=515.51 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:62)
+

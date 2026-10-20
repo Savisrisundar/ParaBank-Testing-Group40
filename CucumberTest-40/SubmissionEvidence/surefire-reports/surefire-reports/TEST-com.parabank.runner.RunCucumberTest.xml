@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.parabank.runner.RunCucumberTest" time="366.167" tests="37" errors="0" skipped="0" failures="10">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40\target\test-classes;C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40\target\classes;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-java\4.51.0\selenium-java-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-api\4.51.0\selenium-api-4.51.0.jar;C:\Users\rayya\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.51.0\selenium-chrome-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.51.0\selenium-chromium-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-json\4.51.0\selenium-json-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.51.0\selenium-manager-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-latest\4.51.0\selenium-devtools-latest-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v153\4.51.0\selenium-devtools-v153-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v154\4.51.0\selenium-devtools-v154-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v155\4.51.0\selenium-devtools-v155-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.51.0\selenium-edge-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.51.0\selenium-firefox-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\jetbrains\annotations\26.1.0\annotations-26.1.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-http\4.51.0\selenium-http-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.51.0\selenium-ie-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.51.0\selenium-remote-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\com\google\guava\guava\33.7.2-jre\guava-33.7.2-jre.jar;C:\Users\rayya\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\rayya\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\rayya\.m2\repository\com\google\errorprone\error_prone_annotations\2.50.0\error_prone_annotations-2.50.0.jar;C:\Users\rayya\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-api\1.66.0\opentelemetry-api-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-context\1.66.0\opentelemetry-context-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-common\1.66.0\opentelemetry-common-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.66.0\opentelemetry-exporter-logging-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.66.0\opentelemetry-sdk-common-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.66.0\opentelemetry-sdk-extension-autoconfigure-spi-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.66.0\opentelemetry-sdk-extension-autoconfigure-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.66.0\opentelemetry-sdk-trace-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.66.0\opentelemetry-sdk-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.66.0\opentelemetry-sdk-metrics-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.66.0\opentelemetry-sdk-logs-1.66.0.jar;C:\Users\rayya\.m2\repository\net\bytebuddy\byte-buddy\1.18.14\byte-buddy-1.18.14.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-os\4.51.0\selenium-os-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.51.0\selenium-safari-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-support\4.51.0\selenium-support-4.51.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-java\7.31.0\cucumber-java-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-core\7.31.0\cucumber-core-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-gherkin\7.31.0\cucumber-gherkin-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.31.0\cucumber-gherkin-messages-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\gherkin\36.0.0\gherkin-36.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\messages\30.1.0\messages-30.1.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\pretty-formatter\2.4.0\pretty-formatter-2.4.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\query\14.7.0\query-14.7.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\teamcity-formatter\0.2.0\teamcity-formatter-0.2.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\testng-xml-formatter\0.7.0\testng-xml-formatter-0.7.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\usage-formatter\0.1.0\usage-formatter-0.1.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\tag-expressions\8.0.0\tag-expressions-8.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-json-formatter\0.3.0\cucumber-json-formatter-0.3.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\datatable\7.31.0\datatable-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-plugin\7.31.0\cucumber-plugin-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\docstring\7.31.0\docstring-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\html-formatter\22.0.0\html-formatter-22.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\junit-xml-formatter\0.10.0\junit-xml-formatter-0.10.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\ci-environment\12.0.0\ci-environment-12.0.0.jar;C:\Users\rayya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.31.0\cucumber-junit-platform-engine-7.31.0.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-engine\1.14.0\junit-platform-engine-1.14.0.jar;C:\Users\rayya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-commons\1.14.0\junit-platform-commons-1.14.0.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.1\junit-jupiter-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.1\junit-jupiter-api-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.1\junit-jupiter-params-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.1\junit-jupiter-engine-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite\1.14.1\junit-platform-suite-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-api\1.14.1\junit-platform-suite-api-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.14.1\junit-platform-suite-engine-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.14.1\junit-platform-suite-commons-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-launcher\1.14.1\junit-platform-launcher-1.14.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\rayya\AppData\Local\Temp\surefire8874685841908320202\surefirebooter-20261021055923565_3.jar C:\Users\rayya\AppData\Local\Temp\surefire8874685841908320202 2026-10-21T05-59-23_439-jvmRun1 surefire-20261021055923565_1tmp surefire_0-20261021055923565_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40\target\test-classes;C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40\target\classes;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-java\4.51.0\selenium-java-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-api\4.51.0\selenium-api-4.51.0.jar;C:\Users\rayya\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.51.0\selenium-chrome-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.51.0\selenium-chromium-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-json\4.51.0\selenium-json-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.51.0\selenium-manager-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-latest\4.51.0\selenium-devtools-latest-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v153\4.51.0\selenium-devtools-v153-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v154\4.51.0\selenium-devtools-v154-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v155\4.51.0\selenium-devtools-v155-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.51.0\selenium-edge-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.51.0\selenium-firefox-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\jetbrains\annotations\26.1.0\annotations-26.1.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-http\4.51.0\selenium-http-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.51.0\selenium-ie-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.51.0\selenium-remote-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\com\google\guava\guava\33.7.2-jre\guava-33.7.2-jre.jar;C:\Users\rayya\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\rayya\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\rayya\.m2\repository\com\google\errorprone\error_prone_annotations\2.50.0\error_prone_annotations-2.50.0.jar;C:\Users\rayya\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-api\1.66.0\opentelemetry-api-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-context\1.66.0\opentelemetry-context-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-common\1.66.0\opentelemetry-common-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.66.0\opentelemetry-exporter-logging-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.66.0\opentelemetry-sdk-common-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.66.0\opentelemetry-sdk-extension-autoconfigure-spi-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.66.0\opentelemetry-sdk-extension-autoconfigure-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.66.0\opentelemetry-sdk-trace-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.66.0\opentelemetry-sdk-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.66.0\opentelemetry-sdk-metrics-1.66.0.jar;C:\Users\rayya\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.66.0\opentelemetry-sdk-logs-1.66.0.jar;C:\Users\rayya\.m2\repository\net\bytebuddy\byte-buddy\1.18.14\byte-buddy-1.18.14.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-os\4.51.0\selenium-os-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.51.0\selenium-safari-driver-4.51.0.jar;C:\Users\rayya\.m2\repository\org\seleniumhq\selenium\selenium-support\4.51.0\selenium-support-4.51.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-java\7.31.0\cucumber-java-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-core\7.31.0\cucumber-core-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-gherkin\7.31.0\cucumber-gherkin-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.31.0\cucumber-gherkin-messages-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\gherkin\36.0.0\gherkin-36.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\messages\30.1.0\messages-30.1.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\pretty-formatter\2.4.0\pretty-formatter-2.4.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\query\14.7.0\query-14.7.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\teamcity-formatter\0.2.0\teamcity-formatter-0.2.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\testng-xml-formatter\0.7.0\testng-xml-formatter-0.7.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\usage-formatter\0.1.0\usage-formatter-0.1.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\tag-expressions\8.0.0\tag-expressions-8.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-json-formatter\0.3.0\cucumber-json-formatter-0.3.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\datatable\7.31.0\datatable-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-plugin\7.31.0\cucumber-plugin-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\docstring\7.31.0\docstring-7.31.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\html-formatter\22.0.0\html-formatter-22.0.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\junit-xml-formatter\0.10.0\junit-xml-formatter-0.10.0.jar;C:\Users\rayya\.m2\repository\io\cucumber\ci-environment\12.0.0\ci-environment-12.0.0.jar;C:\Users\rayya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\rayya\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.31.0\cucumber-junit-platform-engine-7.31.0.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-engine\1.14.0\junit-platform-engine-1.14.0.jar;C:\Users\rayya\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-commons\1.14.0\junit-platform-commons-1.14.0.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.1\junit-jupiter-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.1\junit-jupiter-api-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.1\junit-jupiter-params-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.1\junit-jupiter-engine-5.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite\1.14.1\junit-platform-suite-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-api\1.14.1\junit-platform-suite-api-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.14.1\junit-platform-suite-engine-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.14.1\junit-platform-suite-commons-1.14.1.jar;C:\Users\rayya\.m2\repository\org\junit\platform\junit-platform-launcher\1.14.1\junit-platform-launcher-1.14.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\rayya"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\rayya\AppData\Local\Temp\surefire8874685841908320202\surefirebooter-20261021055923565_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24.0.1+9-30"/>
+    <property name="user.name" value="Rayyan"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\rayya\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\rayya\AppData\Local\Temp\"/>
+    <property name="java.version" value="24.0.1"/>
+    <property name="user.dir" value="C:\Users\rayya\OneDrive\Desktop\Selenium Web Testing\ParaBank-Testing-Group40\CucumberTest-40"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\rayya\Downloads\platform-tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\rayya\Downloads\platform-tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Users\rayya\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rayya\AppData\Roaming\npm;C:\Users\rayya\Downloads\apache-maven-3.10.0\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24.0.1+9-30"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="Pay a bill with complete payee details" classname="Bill payment" time="9.37">
+    <system-out><![CDATA[
+@billpay @regression @smoke @positive
+&amp#27;[1mScenario:&amp#27;[22m Pay a bill with complete payee details                                             &amp#27;[90m# classpath:features/billPay.feature:11&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd2adaf72453c3
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                               &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 138774 | opening balance: $415.50
+Account 138885 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                                 &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits a bill payment of &amp#27;[1m"1.00"&amp#27;[22m with payee name &amp#27;[1m"Electricity Company"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.submitBillPayment(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be confirmed for &amp#27;[1m"Electricity Company"&amp#27;[22m and &amp#27;[1m"1.00"&amp#27;[22m&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillPayment(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe source account balance should decrease by &amp#27;[1m"1.00"&amp#27;[22m&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.verifySourceBalance(java.lang.String)&amp#27;[39m
+]]></system-out>
+    <system-err><![CDATA[Oct 21, 2026 5:59:24 AM org.junit.platform.launcher.core.DiscoveryIssueNotifier logIssues
+WARNING: TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.parabank.runner.RunCucumberTest).
+]]></system-err>
+  </testcase>
+  <testcase name="Reject a bill payment without a payee name" classname="Bill payment" time="7.732">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario:&amp#27;[22m Reject a bill payment without a payee name                      &amp#27;[90m# classpath:features/billPay.feature:17&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdddc5c66cc84ef
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                            &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 138996 | opening balance: $415.50
+Account 139107 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                      &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                              &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits a bill payment of &amp#27;[1m"1.00"&amp#27;[22m with payee name &amp#27;[1m""&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.submitBillPayment(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe missing payee name should be reported&amp#27;[39m                        &amp#27;[90m# com.parabank.steps.BankingSteps.verifyMissingPayee()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe source account balance should remain unchanged&amp#27;[39m                &amp#27;[90m# com.parabank.steps.BankingSteps.verifyUnchangedSourceBalance()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="9.338">
+    <system-out><![CDATA[
+@billpay @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Pay bills with different valid monetary amounts                        &amp#27;[90m# classpath:features/billPay.feature:28&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd189feede0d40
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 139329 | opening balance: $415.50
+Account 139440 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                     &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                             &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer pays &amp#27;[1m"0.01"&amp#27;[22m to &amp#27;[1m"Electricity Company"&amp#27;[22m with valid payee details&amp#27;[39m      &amp#27;[90m# com.parabank.steps.BankingSteps.payValidBill(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill should be confirmed and the source balance debited by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.294">
+    <failure message="Invalid transaction was accepted.&#10;Response: Bill Payment Complete&#10;Bill Payment to Electricity Company in the amount of $0.00 from account 139995 was successful.&#10;See Account Activity for more details.&#10;Balance changes: None detected ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Bill Payment Complete
+Bill Payment to Electricity Company in the amount of $0.00 from account 139995 was successful.
+See Account Activity for more details.
+Balance changes: None detected ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+@billpay @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with invalid monetary amounts       &amp#27;[90m# classpath:features/billPay.feature:38&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd42839dcd9a16
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 139995 | opening balance: $415.50
+Account 140106 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"amount"&amp#27;[22m set to &amp#27;[1m"0"&amp#27;[22m&amp#27;[39m        &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: Invalid transaction was accepted.&amp#27;[39m
+        &amp#27;[31mResponse: Bill Payment Complete&amp#27;[39m
+        &amp#27;[31mBill Payment to Electricity Company in the amount of $0.00 from account 139995 was successful.&amp#27;[39m
+        &amp#27;[31mSee Account Activity for more details.&amp#27;[39m
+        &amp#27;[31mBalance changes: None detected ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)&amp#27;[39m
+        &amp#27;[31m	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:35)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 163536 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mAccount Balance* Available Amount&amp#27;[39m
+        &amp#27;[34m139995 $415.50 $415.50&amp#27;[39m
+        &amp#27;[34m140106 $100.00 $100.00&amp#27;[39m
+        &amp#27;[34mTotal $515.50  &amp#27;[39m
+        &amp#27;[34m*Balance includes deposits that may be subject to holds&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="9.066">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:48&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddf9a27a74512c
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 140661 | opening balance: $415.50
+Account 140772 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"street address"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="9.204">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject inconsistent or invalid payee account details           &amp#27;[90m# classpath:features/billPay.feature:62&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddf2666fc345da
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 143103 | opening balance: $415.50
+Account 143214 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                     &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"verify account"&amp#27;[22m set to &amp#27;[1m"987654"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m       &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="11.964">
+    <system-out><![CDATA[
+@loan @regression @positive
+&amp#27;[1mScenario Outline:&amp#27;[22m Approve realistic loan requests and create a new account      &amp#27;[90m# classpath:features/requestLoan.feature:26&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd53621dd0c49b
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                  &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 144213 | opening balance: $415.50
+Account 144324 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                            &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+144213
+                        
+                            144324
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"50.00"&amp#27;[22m with a down payment of &amp#27;[1m"20.00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+Verified approved loan account: 144546
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe loan application should be approved and a new account should exist&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyApprovedLoanInAccounts()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.549">
+    <failure message="APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+]]></failure>
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid loan and down-payment values                          &amp#27;[90m# classpath:features/requestLoan.feature:36&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddc172e854f854
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 145656 | opening balance: $100.00
+Account 145545 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+145545
+                        
+                            145656
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"100.00"&amp#27;[22m with a down payment of &amp#27;[1m""&amp#27;[22m&amp#27;[39m            &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)&amp#27;[39m
+        &amp#27;[31m	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 149925 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34mError!&amp#27;[39m
+        &amp#27;[34mAn internal error has occurred and has been logged.&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="10.524">
+    <system-out><![CDATA[
+@transfer @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Transfer valid monetary amounts                                       &amp#27;[90m# classpath:features/transferFunds.feature:36&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddb3a68e24f97e
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 147987 | opening balance: $100.00
+Account 147654 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"0.01"&amp#27;[22m between two different accounts&amp#27;[39m                   &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe transfer is confirmed and both account balances change by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="10.095">
+    <failure message="Invalid transaction was accepted.&#10;Response: Transfer Complete!&#10;$0.00 has been transferred from account #149985 to account #150096.&#10;See Account Activity for more details.&#10;Balance changes: None detected ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Transfer Complete!
+$0.00 has been transferred from account #149985 to account #150096.
+See Account Activity for more details.
+Balance changes: None detected ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)
+]]></failure>
+    <system-out><![CDATA[
+@transfer @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid transfer amounts without moving money         &amp#27;[90m# classpath:features/transferFunds.feature:52&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddb077bd0da6ce
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 149985 | opening balance: $415.50
+Account 150096 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"0"&amp#27;[22m between two different accounts&amp#27;[39m             &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe transfer should be rejected without modifying any account balance&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferRejected()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: Invalid transaction was accepted.&amp#27;[39m
+        &amp#27;[31mResponse: Transfer Complete!&amp#27;[39m
+        &amp#27;[31m$0.00 has been transferred from account #149985 to account #150096.&amp#27;[39m
+        &amp#27;[31mSee Account Activity for more details.&amp#27;[39m
+        &amp#27;[31mBalance changes: None detected ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)&amp#27;[39m
+        &amp#27;[31m	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 163863 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mAccount Balance* Available Amount&amp#27;[39m
+        &amp#27;[34m149985 $415.50 $415.50&amp#27;[39m
+        &amp#27;[34m150096 $100.00 $100.00&amp#27;[39m
+        &amp#27;[34mTotal $515.50  &amp#27;[39m
+        &amp#27;[34m*Balance includes deposits that may be subject to holds&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="8.141">
+    <system-out><![CDATA[
+@billpay @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Pay bills with different valid monetary amounts                        &amp#27;[90m# classpath:features/billPay.feature:29&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd3bc0ffbf6135
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 139551 | opening balance: $415.50
+Account 139662 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                     &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                             &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer pays &amp#27;[1m"20.50"&amp#27;[22m to &amp#27;[1m"Electricity Company"&amp#27;[22m with valid payee details&amp#27;[39m     &amp#27;[90m# com.parabank.steps.BankingSteps.payValidBill(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill should be confirmed and the source balance debited by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="8.56">
+    <failure message="Invalid transaction was accepted.&#10;Response: Bill Payment Complete&#10;Bill Payment to Electricity Company in the amount of $-1.00 from account 140217 was successful.&#10;See Account Activity for more details.&#10;Balance changes: &#10;Account 140217: before=415.50, after=416.50 ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Bill Payment Complete
+Bill Payment to Electricity Company in the amount of $-1.00 from account 140217 was successful.
+See Account Activity for more details.
+Balance changes: 
+Account 140217: before=415.50, after=416.50 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)
+	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:35)
+]]></failure>
+    <system-out><![CDATA[
+@billpay @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with invalid monetary amounts       &amp#27;[90m# classpath:features/billPay.feature:39&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdda453fec34870
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 140328 | opening balance: $100.00
+Account 140217 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"amount"&amp#27;[22m set to &amp#27;[1m"-1.00"&amp#27;[22m&amp#27;[39m    &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: Invalid transaction was accepted.&amp#27;[39m
+        &amp#27;[31mResponse: Bill Payment Complete&amp#27;[39m
+        &amp#27;[31mBill Payment to Electricity Company in the amount of $-1.00 from account 140217 was successful.&amp#27;[39m
+        &amp#27;[31mSee Account Activity for more details.&amp#27;[39m
+        &amp#27;[31mBalance changes: &amp#27;[39m
+        &amp#27;[31mAccount 140217: before=415.50, after=416.50 ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyBillRejected(BankingSteps.java:622)&amp#27;[39m
+        &amp#27;[31m	at ✽.the bill payment should be rejected without debiting the customer(classpath:features/billPay.feature:35)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 164082 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mAccount Balance* Available Amount&amp#27;[39m
+        &amp#27;[34m140217 $416.50 $416.50&amp#27;[39m
+        &amp#27;[34m140328 $100.00 $100.00&amp#27;[39m
+        &amp#27;[34mTotal $516.50  &amp#27;[39m
+        &amp#27;[34m*Balance includes deposits that may be subject to holds&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="8.562">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:49&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd7ee11b11d11a
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 141216 | opening balance: $100.00
+Account 141105 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"city"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="11.63">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject inconsistent or invalid payee account details       &amp#27;[90m# classpath:features/billPay.feature:63&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd0a6072c6cf81
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 143325 | opening balance: $415.50
+Account 143436 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"payee account"&amp#27;[22m set to &amp#27;[1m"abc"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m   &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="7.78">
+    <system-out><![CDATA[
+@loan @regression @positive
+&amp#27;[1mScenario Outline:&amp#27;[22m Approve realistic loan requests and create a new account       &amp#27;[90m# classpath:features/requestLoan.feature:27&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddcd65e5e351f7
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 144657 | opening balance: $415.50
+Account 144879 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+144657
+                        
+                            144879
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"100.00"&amp#27;[22m with a down payment of &amp#27;[1m"25.00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+Verified approved loan account: 144990
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe loan application should be approved and a new account should exist&amp#27;[39m  &amp#27;[90m# com.parabank.steps.BankingSteps.verifyApprovedLoanInAccounts()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="9.433">
+    <failure message="APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+]]></failure>
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid loan and down-payment values                          &amp#27;[90m# classpath:features/requestLoan.feature:37&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd5d8793ad0268
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 145878 | opening balance: $415.50
+Account 145989 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+145878
+                        
+                            145989
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"0"&amp#27;[22m with a down payment of &amp#27;[1m"0"&amp#27;[22m&amp#27;[39m                &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)&amp#27;[39m
+        &amp#27;[31m	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 149925 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34mError!&amp#27;[39m
+        &amp#27;[34mAn internal error has occurred and has been logged.&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="10.723">
+    <system-out><![CDATA[
+@transfer @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Transfer valid monetary amounts                                       &amp#27;[90m# classpath:features/transferFunds.feature:37&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd1a720455a7b0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 148320 | opening balance: $415.50
+Account 148542 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"10.50"&amp#27;[22m between two different accounts&amp#27;[39m                  &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe transfer is confirmed and both account balances change by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="9.999">
+    <failure message="Invalid transaction was accepted.&#10;Response: Transfer Complete!&#10;-$1.00 has been transferred from account #150207 to account #150318.&#10;See Account Activity for more details.&#10;Balance changes: &#10;Account 150318: before=100.00, after=99.00&#10;Account 150207: before=415.50, after=416.50 ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+Invalid transaction was accepted.
+Response: Transfer Complete!
+-$1.00 has been transferred from account #150207 to account #150318.
+See Account Activity for more details.
+Balance changes: 
+Account 150318: before=100.00, after=99.00
+Account 150207: before=415.50, after=416.50 ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)
+]]></failure>
+    <system-out><![CDATA[
+@transfer @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid transfer amounts without moving money         &amp#27;[90m# classpath:features/transferFunds.feature:53&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddc9dcbe7938dc
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 150318 | opening balance: $100.00
+Account 150207 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"-1.00"&amp#27;[22m between two different accounts&amp#27;[39m         &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe transfer should be rejected without modifying any account balance&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferRejected()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: Invalid transaction was accepted.&amp#27;[39m
+        &amp#27;[31mResponse: Transfer Complete!&amp#27;[39m
+        &amp#27;[31m-$1.00 has been transferred from account #150207 to account #150318.&amp#27;[39m
+        &amp#27;[31mSee Account Activity for more details.&amp#27;[39m
+        &amp#27;[31mBalance changes: &amp#27;[39m
+        &amp#27;[31mAccount 150318: before=100.00, after=99.00&amp#27;[39m
+        &amp#27;[31mAccount 150207: before=415.50, after=416.50 ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.assertRejectedTransactionState(BankingSteps.java:904)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:511)&amp#27;[39m
+        &amp#27;[31m	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 163785 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mAccount Balance* Available Amount&amp#27;[39m
+        &amp#27;[34m150207 $416.50 $416.50&amp#27;[39m
+        &amp#27;[34m150318 $99.00 $99.00&amp#27;[39m
+        &amp#27;[34mTotal $515.50  &amp#27;[39m
+        &amp#27;[34m*Balance includes deposits that may be subject to holds&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="8.684">
+    <system-out><![CDATA[
+@billpay @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Pay bills with different valid monetary amounts                        &amp#27;[90m# classpath:features/billPay.feature:30&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd54f28193ff4b
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 139773 | opening balance: $415.50
+Account 139884 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                     &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                                             &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer pays &amp#27;[1m"99.99"&amp#27;[22m to &amp#27;[1m"Electricity Company"&amp#27;[22m with valid payee details&amp#27;[39m     &amp#27;[90m# com.parabank.steps.BankingSteps.payValidBill(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill should be confirmed and the source balance debited by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="8.873">
+    <system-out><![CDATA[
+@billpay @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with invalid monetary amounts       &amp#27;[90m# classpath:features/billPay.feature:40&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdde7d34f0ccd17
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 140439 | opening balance: $415.50
+Account 140550 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"amount"&amp#27;[22m set to &amp#27;[1m"abc"&amp#27;[22m&amp#27;[39m      &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="10.032">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:50&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd14529b395359
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 141438 | opening balance: $100.00
+Account 141327 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"state"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m          &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="7.981">
+    <system-out><![CDATA[
+@loan @regression @positive
+&amp#27;[1mScenario Outline:&amp#27;[22m Approve realistic loan requests and create a new account        &amp#27;[90m# classpath:features/requestLoan.feature:28&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddaa4950f47a99
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 145323 | opening balance: $100.00
+Account 145212 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                              &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                  &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+145212
+                        
+                            145323
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"200.00"&amp#27;[22m with a down payment of &amp#27;[1m"100.00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+Verified approved loan account: 145434
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe loan application should be approved and a new account should exist&amp#27;[39m   &amp#27;[90m# com.parabank.steps.BankingSteps.verifyApprovedLoanInAccounts()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="9.397">
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid loan and down-payment values                          &amp#27;[90m# classpath:features/requestLoan.feature:38&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdda7c7226e8e7d
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 146211 | opening balance: $100.00
+Account 146100 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+146100
+                        
+                            146211
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"-1.00"&amp#27;[22m with a down payment of &amp#27;[1m"1.00"&amp#27;[22m&amp#27;[39m         &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+Loan rejection verified with unchanged account balances.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="11.108">
+    <system-out><![CDATA[
+@transfer @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Transfer valid monetary amounts                                       &amp#27;[90m# classpath:features/transferFunds.feature:38&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd1e9a5cb5e428
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 149097 | opening balance: $100.00
+Account 148875 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"25"&amp#27;[22m between two different accounts&amp#27;[39m                     &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe transfer is confirmed and both account balances change by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="9.339">
+    <failure message="APPLICATION DEFECT: Transfer caused a server error: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Transfer caused a server error: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:513)
+	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)
+]]></failure>
+    <system-out><![CDATA[
+@transfer @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid transfer amounts without moving money         &amp#27;[90m# classpath:features/transferFunds.feature:54&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd10a7ddfbbc7b
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                 &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 150651 | opening balance: $415.50
+Account 150762 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                           &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"abc"&amp#27;[22m between two different accounts&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe transfer should be rejected without modifying any account balance&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferRejected()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Transfer caused a server error: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyTransferRejected(BankingSteps.java:513)&amp#27;[39m
+        &amp#27;[31m	at ✽.the transfer should be rejected without modifying any account balance(classpath:features/transferFunds.feature:49)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 163617 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mAccount Balance* Available Amount&amp#27;[39m
+        &amp#27;[34m150651 $415.50 $415.50&amp#27;[39m
+        &amp#27;[34m150762 $100.00 $100.00&amp#27;[39m
+        &amp#27;[34mTotal $515.50  &amp#27;[39m
+        &amp#27;[34m*Balance includes deposits that may be subject to holds&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="12.037">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:51&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddcbc63ca99ec5
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 141549 | opening balance: $415.50
+Account 141660 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"postal code"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m    &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="7.659">
+    <failure message="APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+]]></failure>
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid loan and down-payment values                          &amp#27;[90m# classpath:features/requestLoan.feature:39&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd15ddac7f6fcc
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 146433 | opening balance: $100.00
+Account 146322 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+146322
+                        
+                            146433
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"abc"&amp#27;[22m with a down payment of &amp#27;[1m"1.00"&amp#27;[22m&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)&amp#27;[39m
+        &amp#27;[31m	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 149925 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34mError!&amp#27;[39m
+        &amp#27;[34mAn internal error has occurred and has been logged.&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="8.855">
+    <system-out><![CDATA[
+@transfer @regression @positive @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Transfer valid monetary amounts                                       &amp#27;[90m# classpath:features/transferFunds.feature:39&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddbb2fc8daa633
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 149541 | opening balance: $100.00
+Account 149430 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers &amp#27;[1m"99.99"&amp#27;[22m between two different accounts&amp#27;[39m                  &amp#27;[90m# com.parabank.steps.BankingSteps.submitTransferValue(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe transfer is confirmed and both account balances change by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.5" classname="Examples" time="9.33">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:52&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddc0f6aed94071
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 141882 | opening balance: $415.50
+Account 142215 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"payee account"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m  &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.5" classname="Examples" time="12.2">
+    <failure message="APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)
+]]></failure>
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject invalid loan and down-payment values                          &amp#27;[90m# classpath:features/requestLoan.feature:40&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd7533923df8ea
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 146655 | opening balance: $100.00
+Account 146544 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+146544
+                        
+                            146655
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"100.00"&amp#27;[22m with a down payment of &amp#27;[1m"xyz"&amp#27;[22m&amp#27;[39m         &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)&amp#27;[39m
+        &amp#27;[31m	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:33)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 149925 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34mError!&amp#27;[39m
+        &amp#27;[34mAn internal error has occurred and has been logged.&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.6" classname="Examples" time="17.204">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:53&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd36a19f5b3215
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 142437 | opening balance: $100.00
+Account 142326 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"verify account"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.7" classname="Examples" time="16.919">
+    <system-out><![CDATA[
+@billpay @regression @negative
+&amp#27;[1mScenario Outline:&amp#27;[22m Reject bill payments with missing details                &amp#27;[90m# classpath:features/billPay.feature:54&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdde829922f0419
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 142770 | opening balance: $415.50
+Account 142992 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                       &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Bill Pay page&amp#27;[39m                               &amp#27;[90m# com.parabank.steps.BankingSteps.openBillPay()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer submits bill details with &amp#27;[1m"amount"&amp#27;[22m set to &amp#27;[1m""&amp#27;[22m&amp#27;[39m         &amp#27;[90m# com.parabank.steps.BankingSteps.billFieldInput(java.lang.String,java.lang.String)&amp#27;[39m
+Bill payment rejection verified; account balances unchanged.
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe bill payment should be rejected without debiting the customer&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyBillRejected()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Approve a modest loan with an adequate down payment" classname="Request a loan" time="7.691">
+    <system-out><![CDATA[
+@loan @regression @smoke @positive
+&amp#27;[1mScenario:&amp#27;[22m Approve a modest loan with an adequate down payment               &amp#27;[90m# classpath:features/requestLoan.feature:11&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd15fac40e1e0e
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                              &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 143769 | opening balance: $100.00
+Account 143658 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                        &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                            &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m"100.00"&amp#27;[22m with down payment &amp#27;[1m"20.00"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoan(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe loan decision should be &amp#27;[1m"Approved"&amp#27;[22m&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanDecision(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Reject a missing loan amount with zero down payment" classname="Request a loan" time="9.311">
+    <failure message="APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&#10;An internal error has occurred and has been logged. ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!
+An internal error has occurred and has been logged. ==> expected: <false> but was: <true>
+	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)
+	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:18)
+]]></failure>
+    <system-out><![CDATA[
+@loan @regression @negative @boundary
+&amp#27;[1mScenario:&amp#27;[22m Reject a missing loan amount with zero down payment                          &amp#27;[90m# classpath:features/requestLoan.feature:16&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd75258b015ac5
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                         &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 144102 | opening balance: $100.00
+Account 143991 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                   &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer is on the Request Loan page&amp#27;[39m                                       &amp#27;[90m# com.parabank.steps.BankingSteps.openLoanPage()&amp#27;[39m
+Current URL: https://parabank.parasoft.com/parabank/requestloan.htm
+Loan result panel: Apply for a Loan
+Loan Amount: $
+Down Payment: $
+From account #: 
+                        
+                            
+143991
+                        
+                            144102
+                        
+          
+Invalid fields: 0
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer requests a loan of &amp#27;[1m""&amp#27;[22m with a down payment of &amp#27;[1m"0"&amp#27;[22m&amp#27;[39m                 &amp#27;[90m# com.parabank.steps.BankingSteps.requestLoanVariants(java.lang.String,java.lang.String)&amp#27;[39m
+  &amp#27;[31m✘&amp#27;[39m &amp#27;[31m&amp#27;[1mThen &amp#27;[22mthe loan application should not create an account or change existing balances&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyLoanNoMutation()&amp#27;[39m
+        &amp#27;[31morg.opentest4j.AssertionFailedError: APPLICATION DEFECT: Loan request produced an internal server error instead of appropriate validation: Error!&amp#27;[39m
+        &amp#27;[31mAn internal error has occurred and has been logged. ==> expected: <false> but was: <true>&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)&amp#27;[39m
+        &amp#27;[31m	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)&amp#27;[39m
+        &amp#27;[31m	at com.parabank.steps.BankingSteps.verifyLoanNoMutation(BankingSteps.java:790)&amp#27;[39m
+        &amp#27;[31m	at ✽.the loan application should not create an account or change existing balances(classpath:features/requestLoan.feature:18)&amp#27;[39m
+
+        &amp#27;[34mEmbedding Failure screenshot [image/png 149925 bytes]&amp#27;[39m
+
+
+        &amp#27;[34mExperience the difference&amp#27;[39m
+        &amp#27;[34mSolutions&amp#27;[39m
+        &amp#27;[34mAbout Us&amp#27;[39m
+        &amp#27;[34mServices&amp#27;[39m
+        &amp#27;[34mProducts&amp#27;[39m
+        &amp#27;[34mLocations&amp#27;[39m
+        &amp#27;[34mAdmin Page&amp#27;[39m
+        &amp#27;[34mhome&amp#27;[39m
+        &amp#27;[34mabout&amp#27;[39m
+        &amp#27;[34mcontact&amp#27;[39m
+        &amp#27;[34mWelcome RMIT BDDTest&amp#27;[39m
+        &amp#27;[34mAccount Services&amp#27;[39m
+        &amp#27;[34mOpen New Account&amp#27;[39m
+        &amp#27;[34mAccounts Overview&amp#27;[39m
+        &amp#27;[34mTransfer Funds&amp#27;[39m
+        &amp#27;[34mBill Pay&amp#27;[39m
+        &amp#27;[34mFind Transactions&amp#27;[39m
+        &amp#27;[34mUpdate Contact Info&amp#27;[39m
+        &amp#27;[34mRequest Loan&amp#27;[39m
+        &amp#27;[34mLog Out&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34m&amp#27;[39m
+        &amp#27;[34mError!&amp#27;[39m
+        &amp#27;[34mAn internal error has occurred and has been logged.&amp#27;[39m
+        &amp#27;[34mHome|&amp#27;[39m
+        &amp#27;[34mAbout Us|&amp#27;[39m
+        &amp#27;[34mServices|&amp#27;[39m
+        &amp#27;[34mProducts|&amp#27;[39m
+        &amp#27;[34mLocations|&amp#27;[39m
+        &amp#27;[34mSite Map|&amp#27;[39m
+        &amp#27;[34mContact Us&amp#27;[39m
+        &amp#27;[34m© Parasoft. All rights reserved.&amp#27;[39m
+        &amp#27;[34mVisit us at:&amp#27;[39m
+        &amp#27;[34mwww.parasoft.com&amp#27;[39m
+
+]]></system-out>
+  </testcase>
+  <testcase name="Successfully transfer funds between accounts" classname="Transfer funds between a customer&apos;s bank accounts" time="10.876">
+    <system-out><![CDATA[
+@transfer @regression @smoke @positive
+&amp#27;[1mScenario:&amp#27;[22m Successfully transfer funds between accounts         &amp#27;[90m# classpath:features/transferFunds.feature:10&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdda902a1a72670
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                 &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 146877 | opening balance: $100.00
+Account 146766 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is on the Transfer Funds page&amp#27;[39m           &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsOnTransferPage()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer enters the amount &amp#27;[1m"1"&amp#27;[22m&amp#27;[39m                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerEntersAmount(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer selects an account with sufficient funds&amp#27;[39m  &amp#27;[90m# com.parabank.steps.BankingSteps.selectFundedSourceAccount()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer selects a different destination account&amp#27;[39m   &amp#27;[90m# com.parabank.steps.BankingSteps.selectDifferentDestinationAccount()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mclicks the Transfer button&amp#27;[39m                             &amp#27;[90m# com.parabank.steps.BankingSteps.clickTransferButton()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe message &amp#27;[1m"Transfer Complete!"&amp#27;[22m should be displayed&amp#27;[39m  &amp#27;[90m# com.parabank.steps.BankingSteps.verifyMessage(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe source account balance should decrease by &amp#27;[1m"1"&amp#27;[22m&amp#27;[39m      &amp#27;[90m# com.parabank.steps.BankingSteps.verifySourceBalance(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe destination account balance should increase by &amp#27;[1m"1"&amp#27;[22m&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyDestinationBalance(java.lang.String)&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Transfer funds with an empty amount" classname="Transfer funds between a customer&apos;s bank accounts" time="9.968">
+    <system-out><![CDATA[
+@transfer @regression @negative
+&amp#27;[1mScenario:&amp#27;[22m Transfer funds with an empty amount                 &amp#27;[90m# classpath:features/transferFunds.feature:21&amp#27;[39m
+Created fresh ParaBank test customer: rmitbdd0633de71fb28
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 147321 | opening balance: $100.00
+Account 147099 | opening balance: $415.50
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m          &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is on the Transfer Funds page&amp#27;[39m          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsOnTransferPage()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer leaves the transfer amount empty&amp#27;[39m        &amp#27;[90m# com.parabank.steps.BankingSteps.customerLeavesAmountEmpty()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer selects an account with sufficient funds&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.selectFundedSourceAccount()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer selects a different destination account&amp#27;[39m  &amp#27;[90m# com.parabank.steps.BankingSteps.selectDifferentDestinationAccount()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mclicks the Transfer button&amp#27;[39m                            &amp#27;[90m# com.parabank.steps.BankingSteps.clickTransferButton()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe message &amp#27;[1m"Error!"&amp#27;[22m should be displayed&amp#27;[39m             &amp#27;[90m# com.parabank.steps.BankingSteps.verifyMessage(java.lang.String)&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe transfer confirmation should not be displayed&amp#27;[39m     &amp#27;[90m# com.parabank.steps.BankingSteps.transferConfirmationNotDisplayed()&amp#27;[39m
+]]></system-out>
+  </testcase>
+  <testcase name="Transfer the complete available balance" classname="Transfer funds between a customer&apos;s bank accounts" time="9.282">
+    <system-out><![CDATA[
+@transfer @regression @positive @boundary
+&amp#27;[1mScenario:&amp#27;[22m Transfer the complete available balance                                       &amp#27;[90m# classpath:features/transferFunds.feature:42&amp#27;[39m
+Created fresh ParaBank test customer: rmitbddc3086f04e524
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mGiven &amp#27;[22mthe customer is logged into ParaBank&amp#27;[39m                                          &amp#27;[90m# com.parabank.steps.BankingSteps.customerIsLoggedIn()&amp#27;[39m
+Verified test accounts: 2
+Account 149652 | opening balance: $415.50
+Account 149763 | opening balance: $100.00
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mAnd &amp#27;[22mthe customer has access to two bank accounts&amp#27;[39m                                    &amp#27;[90m# com.parabank.steps.BankingSteps.customerHasTwoAccounts()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mWhen &amp#27;[22mthe customer transfers the entire available balance to another account&amp#27;[39m         &amp#27;[90m# com.parabank.steps.BankingSteps.transferFullBalance()&amp#27;[39m
+  &amp#27;[32m✔&amp#27;[39m &amp#27;[32m&amp#27;[1mThen &amp#27;[22mthe transfer is confirmed and both account balances change by the exact amount&amp#27;[39m &amp#27;[90m# com.parabank.steps.BankingSteps.verifyTransferFinancialState()&amp#27;[39m
+]]></system-out>
+  </testcase>
+</testsuite>

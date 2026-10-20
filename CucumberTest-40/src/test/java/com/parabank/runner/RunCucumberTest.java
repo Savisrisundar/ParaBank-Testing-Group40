@@ -18,7 +18,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 )
 @ConfigurationParameter(
         key = PLUGIN_PROPERTY_NAME,
-        value = "pretty, html:target/cucumber-report.html"
+        value = "pretty, html:target/cucumber-report.html, json:target/cucumber.json, junit:target/cucumber.xml, rerun:target/rerun.txt"
 )
 public class RunCucumberTest {
 }
