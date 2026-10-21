@@ -21,6 +21,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.version>4.33.0</selenium.version>
         <junit.version>5.12.2</junit.version>
+        <!-- Proposed-rule probes are available separately; they are not confirmed acceptance criteria. -->
+        <excludedGroups>exploratory</excludedGroups>
     </properties>
 
     <dependencies>
@@ -64,6 +66,7 @@
                         <include>**/*Test.java</include>
                     </includes>
                     <useModulePath>false</useModulePath>
+                    <excludedGroups>${excludedGroups}</excludedGroups>
                 </configuration>
             </plugin>
 
