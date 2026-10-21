@@ -1,7 +1,5 @@
 # ParaBank Cucumber — Assignment 3, Part 3
 
-This is the complete combined project. No patching or file replacement is needed.
-
 ## Open and run
 
 1. Extract the ZIP into a NEW folder (keep your old project as a backup).
